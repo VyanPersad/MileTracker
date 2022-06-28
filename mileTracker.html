@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="jQuery/jquery.mobile-1.4.5/demos/css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="jQuery/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.css">
+
+    <script src="jQuery/jquery.mobile-1.4.5/demos/js/jquery.min.js"></script>
+    <script src="jQuery/jquery.mobile-1.4.5/demos/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="jQuery/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+
+    <script src="mileTracker.js"></script>
+    <link rel="stylesheet" type="text/css" href="mileTracker.css">
+
+</head>
+
+<body>
+    <div data-role="page" id="pg1">
+        <header data-role="header" data-theme="b">
+            <h1>Tracker</h1>
+        </header>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pg1" data-transition="none" data-icon="home">Home</a></li>
+                <li><a href="#pg2" data-transition="none" data-icon="plus">Add</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h3>Welcome to the Tracker App</h3>
+            <p>This app allows yoou to track things locally</p>
+
+            <ul id="stats" data-role="listview" data-filter="true" data-filter-placeholder="Fitler Results"
+                data-inset="true"></ul>
+            <br>
+            <button id="clearData" onclick="return confirm('Are you Sure?')" data-theme="b">Clear</button>
+        </div>
+        <footer data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2022</h4>
+        </footer>
+    </div>
+    <!-- Start of second page -->
+    <div data-role="page" id="pg2">
+        <header data-role="header" data-theme="b">
+            <h1>Tracker</h1>
+        </header>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pg1" data-transition="none" data-icon="home">Home</a></li>
+                <li><a href="#pg2" data-transition="none" data-icon="plus">Add</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h3>Add Something</h3>
+            <form id="addForm">
+                <label for="addItems">Enter items</label>
+                <input type="text" id="addItems">
+                <label for="addDate">Enter Date: </label>
+                <input type="text" data-role="date" class="date" id="addDate" data-inline="true">
+                <button id="submitItem" class="ui-btn ui-btn-b ui-corner-all">Submit</button>
+            </form>
+        </div>
+        <footer data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2022</h4>
+        </footer>
+    </div>
+    <!-- Edit page -->
+    <div data-role="page" id="edit">
+        <header data-role="header" data-theme="b">
+            <h1>Tracker</h1>
+        </header>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pg1" data-transition="none" data-icon="home">Home</a></li>
+                <li><a href="#pg2" data-transition="none" data-icon="plus">Add</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h3>Edit</h3>
+            <form id="addForm">
+                <label for="editItems">Edit Items</label>
+                <input type="text" id="editItems">
+                <label for="editDate">Edit Date: </label>
+                <input type="text" data-role="date" class="date" id="editDate" data-inline="true">
+                <button id="submitEditItem" class="ui-btn ui-btn-b ui-corder-all">Edit</button>
+            </form>
+        </div>
+        <footer data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2022</h4>
+        </footer>
+    </div>
+</body>
+
+</html>
